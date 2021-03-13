@@ -27,12 +27,12 @@ async def on_message(message):
 
 @client.command(name = 'help')
 async def help(context):
-    file = discord.File("C:/Users/shaan/Desktop/CrimsonDaisy/DaisyIcon.png", filename="image.png")
+    file = discord.File("Images/DaisyIcon.png", filename="image.png")
     CrimsonDaisy = discord.Embed(title = "Help", type = "rich", description = "I am Crimson mf Daisy", color = 0x00ff00)
     CrimsonDaisy.set_thumbnail(url="attachment://image.png")
+    CrimsonDaisy.set_author(name = "Crimson Daisy", icon_url = "https://ssb.wiki.gallery/images/2/2d/DaisyHeadSSBUWebsite.png")
     CrimsonDaisy.add_field(name = "!smash <OPTIONAL @USER>", value = "Smash that mf", inline=False)
     CrimsonDaisy.set_footer(text = "Degen Daisy Main")
-    CrimsonDaisy.set_author(name = "Crimson Daisy", icon_url = "https://ssb.wiki.gallery/images/2/2d/DaisyHeadSSBUWebsite.png")
     await context.message.channel.send(file=file, embed=CrimsonDaisy)
 
 
@@ -42,5 +42,17 @@ async def smash(context, user : discord.User = None):
         await context.send("Fire Emblem exists")
     else:
         await context.send("I'm gonna smash " + user.mention)
+
+@client.command(name = 'Daisy')
+async def Daisy(context):
+    file = discord.File("Images/DaisyImage.png", filename="image.png")
+    CrimsonDaisy = discord.Embed(title = "Daisy", type = "rich", description = "My Main, float cancels OP", color = 0xfca103)
+    CrimsonDaisy.set_thumbnail(url="attachment://image.png")
+    CrimsonDaisy.set_author(name = "#13: Daisy", url = "https://open.spotify.com/album/0Sft679qCdCzuedMr6Obue", icon_url = "https://ssb.wiki.gallery/images/2/2d/DaisyHeadSSBUWebsite.png")
+    CrimsonDaisy.add_field(name = "Run Speed", value = "1.595", inline=True)
+    CrimsonDaisy.add_field(name = "Air Speed", value = "1.029", inline=True)
+    CrimsonDaisy.add_field(name = "Fall/Fast Fall Speed", value = "1.19/1.904", inline=False)
+    CrimsonDaisy.set_footer(text = "Degen Daisy Main")
+    await context.message.channel.send(file=file, embed=CrimsonDaisy)
        
-client.run(TOKEN)
+client.run('TOKEN')
