@@ -52,7 +52,7 @@ async def Daisy(context):
     CrimsonDaisy.add_field(name = "Run Speed", value = "1.595", inline=True)
     CrimsonDaisy.add_field(name = "Air Speed", value = "1.029", inline=True)
     CrimsonDaisy.add_field(name = "Fall/Fast Fall Speed", value = "1.19/1.904", inline=False)
-    CrimsonDaisy.set_footer(text = "Degen Daisy Main")
+    CrimsonDaisy.set_footer(text = "Absolute scale: Sonic = highest run speed, Robin = very low run speed")
     await context.message.channel.send(file=file, embed=CrimsonDaisy)
        
 client.run('TOKEN')
