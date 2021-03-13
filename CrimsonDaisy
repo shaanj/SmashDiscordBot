@@ -43,4 +43,4 @@ async def smash(context, user : discord.User = None):
     else:
         await context.send("I'm gonna smash " + user.mention)
        
-client.run('ODE4MzM4NDYxNjQyNzg0NzY4.YEWnFQ.BTcWT0vdGFcqBbcqKL-t4Gz884A')
+client.run()
